@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf8ff;
+  --foreground: #1e1b4b;
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  /* San Francisco on Apple devices, the native system font elsewhere */
+  --font-sans: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 0%, #e0f2fe 0, transparent 45%),
+    radial-gradient(circle at 85% 10%, #ede9fe 0, transparent 50%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Student Analytics dashboard: dark, Grafana-inspired palette (used as
+   bg-gf-panel, text-gf-muted, …). Chart colours mirror these in
+   app/dashboard/_components/chart-theme.ts. */
+@theme {
+  --color-gf-canvas: #111217;
+  --color-gf-panel: #181b1f;
+  --color-gf-raised: #22252b;
+  --color-gf-border: #2c3038;
+  --color-gf-text: #d8d9e0;
+  --color-gf-muted: #a0a3b1;
+  --color-gf-blue: #5794f2;
+  --color-gf-green: #73bf69;
+  --color-gf-amber: #ffb357;
+  --color-gf-red: #f2495c;
+  --color-gf-grey: #7b7f8c;
+}
